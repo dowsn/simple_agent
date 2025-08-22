@@ -1,0 +1,43 @@
+{"level":"INFO","timestamp":"2025-08-22T13:14:09.308052","namespace":"mcp_agent.core.context","message":"Configuring logger with level: info"}
+{"level":"INFO","timestamp":"2025-08-22T13:14:09.310060","namespace":"mcp_agent.web_scraper","message":"Loading subagents from configuration..."}
+{"level":"INFO","timestamp":"2025-08-22T13:14:09.310446","namespace":"mcp_agent.web_scraper","message":"MCPApp initialized","data":{"data":{"progress_action":"Running","target":"web_scraper","agent_name":"mcp_application_loop","session_id":"9a60cda8-0cee-4ad4-9733-0fe8f92f6acb"}}}
+{"level":"INFO","timestamp":"2025-08-22T13:14:09.310586","namespace":"mcp_agent.web_scraper","message":"============================================================"}
+{"level":"INFO","timestamp":"2025-08-22T13:14:09.310597","namespace":"mcp_agent.web_scraper","message":"Web Scraper Started","data":{"data":{"urls":["https://latent.space"],"criteria":"education and AI","spreadsheet":"1PMId37fQEBHPSdmZKcI36b1h0Jumy7ZsstF4u6v_QnA"}}}
+{"level":"INFO","timestamp":"2025-08-22T13:14:09.310604","namespace":"mcp_agent.web_scraper","message":"============================================================"}
+{"level":"INFO","timestamp":"2025-08-22T13:14:09.310616","namespace":"mcp_agent.web_scraper","message":"Starting web scraper workflow","data":{"data":{"urls":["https://latent.space"],"criteria":"education and AI"}}}
+{"level":"INFO","timestamp":"2025-08-22T13:14:09.343903","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"firecrawl: Up and running with a persistent connection!"}
+{"level":"INFO","timestamp":"2025-08-22T13:14:11.848418","namespace":"mcp_agent.web_scraper","message":"Web Scraper Agent: Starting article extraction"}
+{"level":"INFO","timestamp":"2025-08-22T13:14:15.741478","namespace":"mcp_agent.mcp.mcp_aggregator.web_scraper","message":"Requesting tool call","data":{"data":{"progress_action":"Calling Tool","tool_name":"firecrawl_extract","server_name":"firecrawl","agent_name":"web_scraper"}}}
+{"level":"INFO","timestamp":"2025-08-22T13:14:27.413391","namespace":"mcp_agent.web_scraper","message":"Raw response length: 701 chars"}
+{"level":"INFO","timestamp":"2025-08-22T13:14:27.413437","namespace":"mcp_agent.web_scraper","message":"Raw response: [Calling tool firecrawl_firecrawl_extract with args {'urls': ['https://latent.space'], 'prompt': 'Extract the most recent/prominent article information from the main page', 'schema': {'type': 'object', 'properties': {'title': {'type': 'string', 'description': 'Article title'}, 'author': {'type': 'string', 'description': 'Author name if available'}, 'date': {'type': 'string', 'description': 'Publication date'}, 'link': {'type': 'string', 'description': 'Direct link to the article'}}, 'required': ['title', 'link']}}]\n```json\n{\n  \"title\": \"RAG is Dead, Context Engineering is King \u2014 with Jeff Huber of Chroma\",\n  \"author\": \"\",\n  \"date\": \"Aug 19\",\n  \"link\": \"https://www.latent.space/p/chroma\"\n}\n```"}
+{"level":"INFO","timestamp":"2025-08-22T13:14:27.414659","namespace":"mcp_agent.web_scraper","message":"Scraped: RAG is Dead, Context Engineering is King \u2014 with Jeff Huber o..."}
+{"level":"INFO","timestamp":"2025-08-22T13:14:27.427732","namespace":"mcp_agent.web_scraper","message":"Completed scraping: 1 articles"}
+{"level":"INFO","timestamp":"2025-08-22T13:14:27.428190","namespace":"mcp_agent.mcp.mcp_aggregator.web_scraper","message":"Last aggregator closing, shutting down all persistent connections..."}
+{"level":"INFO","timestamp":"2025-08-22T13:14:27.428494","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"Disconnecting all persistent server connections..."}
+{"level":"INFO","timestamp":"2025-08-22T13:14:27.430610","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"firecrawl: Requesting shutdown..."}
+{"level":"INFO","timestamp":"2025-08-22T13:14:27.632137","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"All persistent server connections signaled to disconnect."}
+{"level":"INFO","timestamp":"2025-08-22T13:14:27.634765","namespace":"mcp_agent.mcp.mcp_aggregator.web_scraper","message":"Connection manager successfully closed and removed from context"}
+{"level":"INFO","timestamp":"2025-08-22T13:14:27.661400","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"zapier: Up and running with a persistent connection!"}
+{"level":"INFO","timestamp":"2025-08-22T13:14:28.740945","namespace":"mcp_agent.web_scraper","message":"Spreadsheet Manager: Checking for duplicates"}
+{"level":"INFO","timestamp":"2025-08-22T13:14:33.324183","namespace":"mcp_agent.mcp.mcp_aggregator.spreadsheet_manager","message":"Requesting tool call","data":{"data":{"progress_action":"Calling Tool","tool_name":"google_sheets_lookup_spreadsheet_row","server_name":"zapier","agent_name":"spreadsheet_manager"}}}
+{"level":"INFO","timestamp":"2025-08-22T13:14:41.725397","namespace":"mcp_agent.web_scraper","message":"Article is new"}
+{"level":"INFO","timestamp":"2025-08-22T13:14:41.737643","namespace":"mcp_agent.web_scraper","message":"Adding single article"}
+{"level":"INFO","timestamp":"2025-08-22T13:14:45.413650","namespace":"mcp_agent.mcp.mcp_aggregator.spreadsheet_manager","message":"Requesting tool call","data":{"data":{"progress_action":"Calling Tool","tool_name":"google_sheets_create_spreadsheet_row","server_name":"zapier","agent_name":"spreadsheet_manager"}}}
+{"level":"INFO","timestamp":"2025-08-22T13:14:59.673178","namespace":"mcp_agent.mcp.mcp_aggregator.spreadsheet_manager","message":"Last aggregator closing, shutting down all persistent connections..."}
+{"level":"INFO","timestamp":"2025-08-22T13:14:59.672528","namespace":"mcp_agent.web_scraper","message":"Article added successfully"}
+{"level":"INFO","timestamp":"2025-08-22T13:14:59.674131","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"Disconnecting all persistent server connections..."}
+{"level":"INFO","timestamp":"2025-08-22T13:14:59.677055","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"zapier: Requesting shutdown..."}
+{"level":"INFO","timestamp":"2025-08-22T13:14:59.878535","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"All persistent server connections signaled to disconnect."}
+{"level":"INFO","timestamp":"2025-08-22T13:14:59.880474","namespace":"mcp_agent.mcp.mcp_aggregator.spreadsheet_manager","message":"Connection manager successfully closed and removed from context"}
+{"level":"INFO","timestamp":"2025-08-22T13:14:59.905712","namespace":"mcp_agent.web_scraper","message":"Content Processor: Analyzing articles"}
+{"level":"INFO","timestamp":"2025-08-22T13:15:15.209615","namespace":"mcp_agent.web_scraper","message":"Selected: RAG is Dead, Context Engineering is King \u2014 with Jeff Huber of Chroma"}
+{"level":"INFO","timestamp":"2025-08-22T13:15:15.223309","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"firecrawl: Up and running with a persistent connection!"}
+{"level":"INFO","timestamp":"2025-08-22T13:15:17.455490","namespace":"mcp_agent.web_scraper","message":"Fetching full content for selected article"}
+{"level":"INFO","timestamp":"2025-08-22T13:15:20.613412","namespace":"mcp_agent.mcp.mcp_aggregator.content_fetcher","message":"Requesting tool call","data":{"data":{"progress_action":"Calling Tool","tool_name":"firecrawl_scrape","server_name":"firecrawl","agent_name":"content_fetcher"}}}
+{"level":"INFO","timestamp":"2025-08-22T13:15:54.097243","namespace":"mcp_agent.web_scraper","message":"Extracted 2983 characters of content"}
+{"level":"INFO","timestamp":"2025-08-22T13:15:54.110477","namespace":"mcp_agent.web_scraper","message":"Generating social media posts"}
+{"level":"ERROR","timestamp":"2025-08-22T13:16:35.804298","namespace":"mcp_agent.web_scraper","message":"Failed to generate social posts: Invalid control character at: line 2 column 157 (char 158)"}
+{"level":"INFO","timestamp":"2025-08-22T13:16:35.817553","namespace":"mcp_agent.mcp.mcp_aggregator.content_fetcher","message":"Last aggregator closing, shutting down all persistent connections..."}
+{"level":"INFO","timestamp":"2025-08-22T13:16:35.817798","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"Disconnecting all persistent server connections..."}
+{"level":"INFO","timestamp":"2025-08-22T13:16:35.819046","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"firecrawl: Requesting shutdown..."}
+{"level":"INFO","timestamp":"2025-08-22T13:16:36.020343","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"All persistent server connections signaled to disconnect."}

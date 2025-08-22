@@ -1,0 +1,1895 @@
+{
+  "timestamp": "2025-08-21T20:00:13.463180",
+  "tools": {
+    "zapier_add_tools": {
+      "name": "zapier_add_tools",
+      "description": "Add new actions to your MCP provider",
+      "input_schema": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    "zapier_edit_tools": {
+      "name": "zapier_edit_tools",
+      "description": "Edit your existing MCP provider actions",
+      "input_schema": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    "zapier_firecrawl_get_data_from_crawl": {
+      "name": "zapier_firecrawl_get_data_from_crawl",
+      "description": "Get the status and data from a crawl",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "jobId": {
+            "type": "string",
+            "description": "Crawl Job Id"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_firecrawl_get_data_from_extract": {
+      "name": "zapier_firecrawl_get_data_from_extract",
+      "description": "Get the status and data from Extract ",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "jobId": {
+            "type": "string",
+            "description": "Extract Job Id"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_gmail_find_email": {
+      "name": "zapier_gmail_find_email",
+      "description": "Finds an email message.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "query": {
+            "type": "string",
+            "description": "This is a gmail query search. Examples of queries include specifying sender (from:amy), recipient (to:david), words in the subject line (subject:dinner), matching multiple terms (from:amy OR from:david), excluding terms (dinner -movie), searching for an exact word or phrase (\"dinner and movie tonight\"), attachments (has:attachment, filename:pdf), labels (label:friends), and time periods (after:YYYY-MM-DD, before:YYYY-MM-DD). Users can also search by categories (category:updates), message size (larger:10M), and more. When asked vaguely to return the last, latest, or any email from their inbox, use in:inbox to do the lookup."
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_gmail_add_label_to_email": {
+      "name": "zapier_gmail_add_label_to_email",
+      "description": "Add a label to an email message.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "message_id": {
+            "type": "string",
+            "description": "Message"
+          },
+          "new_label_ids": {
+            "type": "string",
+            "description": "Label"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_gmail_archive_email": {
+      "name": "zapier_gmail_archive_email",
+      "description": "Archive an email message.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "message_id": {
+            "type": "string",
+            "description": "Message"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_gmail_delete_email": {
+      "name": "zapier_gmail_delete_email",
+      "description": "Sends an email message to the trash.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "message_id": {
+            "type": "string",
+            "description": "Email message to be Deleted"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_gmail_create_draft": {
+      "name": "zapier_gmail_create_draft",
+      "description": "Create a draft email message.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "cc": {
+            "type": "string",
+            "description": "Can be comma separated. The user must provide a valid email address, do not guess or use fake email addresses like @example.com. Perhaps look it up in a CRM or contact book first?"
+          },
+          "to": {
+            "type": "string",
+            "description": "Can be comma separated. The user must provide a valid email address, do not guess or use fake email addresses like @example.com. Perhaps look it up in a CRM or contact book first?"
+          },
+          "bcc": {
+            "type": "string",
+            "description": "Can be comma separated. The user must provide a valid email address, do not guess or use fake email addresses like @example.com. Perhaps look it up in a CRM or contact book first?"
+          },
+          "body": {
+            "type": "string",
+            "description": "Specify content of the email to draft. It should be in the HTML format unless specified otherwise."
+          },
+          "file": {
+            "type": "string",
+            "description": "Attachments"
+          },
+          "from": {
+            "type": "string",
+            "description": "From"
+          },
+          "subject": {
+            "type": "string",
+            "description": "Subject"
+          },
+          "body_type": {
+            "type": "string",
+            "description": "Specify content's type of the email to draft. It should default to 'html' unless specified otherwise."
+          },
+          "from_name": {
+            "type": "string",
+            "description": "From Name"
+          },
+          "label_ids": {
+            "type": "string",
+            "description": "Label or mailbox"
+          },
+          "signature": {
+            "type": "string",
+            "description": "Add signature default"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_gmail_create_draft_reply": {
+      "name": "zapier_gmail_create_draft_reply",
+      "description": "Create a draft reply to an existing email.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "cc": {
+            "type": "string",
+            "description": "Cc"
+          },
+          "to": {
+            "type": "string",
+            "description": "To"
+          },
+          "bcc": {
+            "type": "string",
+            "description": "Bcc"
+          },
+          "body": {
+            "type": "string",
+            "description": "Body"
+          },
+          "file": {
+            "type": "string",
+            "description": "Attachments"
+          },
+          "from": {
+            "type": "string",
+            "description": "From"
+          },
+          "body_type": {
+            "type": "string",
+            "description": "Body type"
+          },
+          "from_name": {
+            "type": "string",
+            "description": "From Name"
+          },
+          "label_ids": {
+            "type": "string",
+            "description": "Label or mailbox"
+          },
+          "signature": {
+            "type": "string",
+            "description": "Add signature default"
+          },
+          "thread_id": {
+            "type": "string",
+            "description": "Thread"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_gmail_create_label": {
+      "name": "zapier_gmail_create_label",
+      "description": "Creates a new label.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of label"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_gmail_send_email": {
+      "name": "zapier_gmail_send_email",
+      "description": "Create and send a new email message.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "cc": {
+            "type": "string",
+            "description": "Can be comma separated. The user must provide a valid email address, do not guess or use fake email addresses like @example.com. Perhaps look it up in a CRM or contact book first?"
+          },
+          "to": {
+            "type": "string",
+            "description": "Can be comma separated. The user must provide a valid email address, do not guess or use fake email addresses like @example.com. Perhaps look it up in a CRM or contact book first?"
+          },
+          "bcc": {
+            "type": "string",
+            "description": "Can be comma separated. The user must provide a valid email address, do not guess or use fake email addresses like @example.com. Perhaps look it up in a CRM or contact book first?"
+          },
+          "body": {
+            "type": "string",
+            "description": "Body"
+          },
+          "file": {
+            "type": "string",
+            "description": "Attachments"
+          },
+          "from": {
+            "type": "string",
+            "description": "From"
+          },
+          "subject": {
+            "type": "string",
+            "description": "Subject"
+          },
+          "reply_to": {
+            "type": "string",
+            "description": "Reply To"
+          },
+          "body_type": {
+            "type": "string",
+            "description": "Body type"
+          },
+          "from_name": {
+            "type": "string",
+            "description": "From Name"
+          },
+          "label_ids": {
+            "type": "string",
+            "description": "Label or mailbox"
+          },
+          "signature": {
+            "type": "string",
+            "description": "Add signature default"
+          },
+          "send_to_groups": {
+            "type": "string",
+            "description": "Send message to Google Contacts Group/Label"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_gmail_remove_label_from_email": {
+      "name": "zapier_gmail_remove_label_from_email",
+      "description": "Remove a label from an email message.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "label_ids": {
+            "type": "string",
+            "description": "Label(s) to remove"
+          },
+          "message_id": {
+            "type": "string",
+            "description": "Message"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_gmail_remove_label_from_conversation": {
+      "name": "zapier_gmail_remove_label_from_conversation",
+      "description": "Remove a specified label from all emails within a conversation.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "label_ids": {
+            "type": "string",
+            "description": "Label(s) to remove"
+          },
+          "thread_id": {
+            "type": "string",
+            "description": "Thread"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_gmail_reply_to_email": {
+      "name": "zapier_gmail_reply_to_email",
+      "description": "Send a reply to an email message.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "cc": {
+            "type": "string",
+            "description": "Cc"
+          },
+          "to": {
+            "type": "string",
+            "description": "To"
+          },
+          "bcc": {
+            "type": "string",
+            "description": "Bcc"
+          },
+          "body": {
+            "type": "string",
+            "description": "Body"
+          },
+          "file": {
+            "type": "string",
+            "description": "Attachments"
+          },
+          "from": {
+            "type": "string",
+            "description": "From"
+          },
+          "subject": {
+            "type": "string",
+            "description": "Subject"
+          },
+          "reply_to": {
+            "type": "string",
+            "description": "Reply To"
+          },
+          "body_type": {
+            "type": "string",
+            "description": "Body type"
+          },
+          "from_name": {
+            "type": "string",
+            "description": "From Name"
+          },
+          "label_ids": {
+            "type": "string",
+            "description": "Label or mailbox"
+          },
+          "signature": {
+            "type": "string",
+            "description": "Add signature default"
+          },
+          "thread_id": {
+            "type": "string",
+            "description": "Thread"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_linkedin_create_company_update": {
+      "name": "zapier_linkedin_create_company_update",
+      "description": "Creates a new update for a Company Page.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "image": {
+            "type": "string",
+            "description": "Image"
+          },
+          "title": {
+            "type": "string",
+            "description": "Preview - Title"
+          },
+          "comment": {
+            "type": "string",
+            "description": "Update Content"
+          },
+          "company_id": {
+            "type": "string",
+            "description": "LinkedIn Company Page"
+          },
+          "image_type": {
+            "type": "string",
+            "description": "Image Type"
+          },
+          "description": {
+            "type": "string",
+            "description": "Preview - Description"
+          },
+          "submitted_url": {
+            "type": "string",
+            "description": "Media URL"
+          },
+          "allow_reserved_characters": {
+            "type": "string",
+            "description": "Allow Mentions in content?"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_linkedin_create_share_update": {
+      "name": "zapier_linkedin_create_share_update",
+      "description": "Posts a status update sharing some content.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "comment": {
+            "type": "string",
+            "description": "Comment"
+          },
+          "content__title": {
+            "type": "string",
+            "description": "Content - Title"
+          },
+          "visibility__code": {
+            "type": "string",
+            "description": "Visible To"
+          },
+          "content__description": {
+            "type": "string",
+            "description": "Content - Description"
+          },
+          "content__submitted_url": {
+            "type": "string",
+            "description": "Content - URL"
+          },
+          "content__submitted_image_url": {
+            "type": "string",
+            "description": "Content - Image URL"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_linkedin_api_request_beta": {
+      "name": "zapier_linkedin_api_request_beta",
+      "description": "This is an advanced action which makes a raw HTTP request that includes this integration's authentication.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "url": {
+            "type": "string",
+            "description": "URL"
+          },
+          "body": {
+            "type": "string",
+            "description": "Body"
+          },
+          "method": {
+            "type": "string",
+            "description": "HTTP Method"
+          },
+          "headers": {
+            "type": "string",
+            "description": "Additional request headers"
+          },
+          "querystring": {
+            "type": "string",
+            "description": "Query string parameters"
+          },
+          "fail_on_errors": {
+            "type": "string",
+            "description": "Stop on error"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_lookup_spreadsheet_rows_advanced": {
+      "name": "zapier_google_sheets_lookup_spreadsheet_rows_advanced",
+      "description": "Find up to 500 rows based on a column and value as line items.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "bottom_up": {
+            "type": "string",
+            "description": "Search from last row"
+          },
+          "row_count": {
+            "type": "string",
+            "description": "Row count"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "lookup_key": {
+            "type": "string",
+            "description": "Lookup column"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          },
+          "lookup_value": {
+            "type": "string",
+            "description": "Lookup value"
+          },
+          "lookup_key_support": {
+            "type": "string",
+            "description": "Supporting lookup column"
+          },
+          "lookup_value_support": {
+            "type": "string",
+            "description": "Supporting lookup value"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_find_worksheet": {
+      "name": "zapier_google_sheets_find_worksheet",
+      "description": "Finds a worksheet by title.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "title": {
+            "type": "string",
+            "description": "Title"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_get_data_range": {
+      "name": "zapier_google_sheets_get_data_range",
+      "description": "Get data from a specific range in a Google Spreadsheet using A1 notation (e.g., \"A1:D10\", \"B2:E5\").",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "a1_range": {
+            "type": "string",
+            "description": "A1 Range"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_get_many_spreadsheet_rows_advanced": {
+      "name": "zapier_google_sheets_get_many_spreadsheet_rows_advanced",
+      "description": "Return up to 1,500 rows as a single JSON value or as line items.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "range": {
+            "type": "string",
+            "description": "Columns"
+          },
+          "first_row": {
+            "type": "string",
+            "description": "First row"
+          },
+          "row_count": {
+            "type": "string",
+            "description": "Row count"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          },
+          "output_format": {
+            "type": "string",
+            "description": "Output format"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_get_row_by_id": {
+      "name": "zapier_google_sheets_get_row_by_id",
+      "description": "Get a specific spreadsheet row by its row number (ID). Row 1 is typically the header row.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "row_id": {
+            "type": "string",
+            "description": "Row ID"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_get_spreadsheet_by_id": {
+      "name": "zapier_google_sheets_get_spreadsheet_by_id",
+      "description": "Get a specific Google Spreadsheet by its ID. Returns the raw spreadsheet data from the Google Sheets API.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet ID"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_change_sheet_properties": {
+      "name": "zapier_google_sheets_change_sheet_properties",
+      "description": "Update Google Sheets properties like frozen rows/columns, sheet position, and visibility settings.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "hidden": {
+            "type": "string",
+            "description": "Hide Sheet"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "frozen_rows": {
+            "type": "string",
+            "description": "Frozen Rows Count"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          },
+          "frozen_columns": {
+            "type": "string",
+            "description": "Frozen Columns Count"
+          },
+          "sheet_position": {
+            "type": "string",
+            "description": "Sheet Position"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_lookup_spreadsheet_row": {
+      "name": "zapier_google_sheets_lookup_spreadsheet_row",
+      "description": "Find a specific spreadsheet row based on a column and value. If found, it returns the entire row.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "bottom_up": {
+            "type": "string",
+            "description": "Search from last row"
+          },
+          "row_count": {
+            "type": "string",
+            "description": "Row count"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "lookup_key": {
+            "type": "string",
+            "description": "Lookup column"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          },
+          "lookup_value": {
+            "type": "string",
+            "description": "Lookup value"
+          },
+          "lookup_key_support": {
+            "type": "string",
+            "description": "Supporting lookup column"
+          },
+          "lookup_value_support": {
+            "type": "string",
+            "description": "Supporting lookup value"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_create_spreadsheet_column": {
+      "name": "zapier_google_sheets_create_spreadsheet_column",
+      "description": "Create a new column in a specific spreadsheet.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "index": {
+            "type": "string",
+            "description": "Index"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "column_name": {
+            "type": "string",
+            "description": "Column Name"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_create_spreadsheet_row": {
+      "name": "zapier_google_sheets_create_spreadsheet_row",
+      "description": "Create a new row in a specific spreadsheet.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "timezone": {
+            "type": "string",
+            "description": "Use Timezone set up on the spreadsheet to format date values?"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_create_multiple_spreadsheet_rows": {
+      "name": "zapier_google_sheets_create_multiple_spreadsheet_rows",
+      "description": "Create one or more new rows in a specific spreadsheet (with line item support).",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_create_spreadsheet_row_at_top": {
+      "name": "zapier_google_sheets_create_spreadsheet_row_at_top",
+      "description": "Creates a new spreadsheet row at the top of a spreadsheet (after the header row).",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_create_conditional_formatting_rule": {
+      "name": "zapier_google_sheets_create_conditional_formatting_rule",
+      "description": "Apply conditional formatting to cells in a Google Sheets spreadsheet based on their values.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "range": {
+            "type": "string",
+            "description": "Cell Range"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "text_color": {
+            "type": "string",
+            "description": "Text Color"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          },
+          "condition_type": {
+            "type": "string",
+            "description": "Condition Type"
+          },
+          "background_color": {
+            "type": "string",
+            "description": "Background Color"
+          },
+          "text_format_bold": {
+            "type": "string",
+            "description": "Bold Text"
+          },
+          "text_format_italic": {
+            "type": "string",
+            "description": "Italic Text"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_copy_range": {
+      "name": "zapier_google_sheets_copy_range",
+      "description": "Copy data from one range to another within a Google Sheets spreadsheet, with options for what to paste (values, formatting, etc.).",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "paste_type": {
+            "type": "string",
+            "description": "Paste Type"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          },
+          "source_range": {
+            "type": "string",
+            "description": "Source Range"
+          },
+          "destination_range": {
+            "type": "string",
+            "description": "Destination Range"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_copy_worksheet": {
+      "name": "zapier_google_sheets_copy_worksheet",
+      "description": "Creates a new worksheet by copying an existing worksheet.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "copy_to": {
+            "type": "string",
+            "description": "Copy Worksheet Destination"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet to Copy"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet Containing the Worksheet to Copy"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_create_spreadsheet": {
+      "name": "zapier_google_sheets_create_spreadsheet",
+      "description": "Creates a new spreadsheet. Choose from a blank spreadsheet, a copy of an existing one, or one with headers.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "title": {
+            "type": "string",
+            "description": "Title"
+          },
+          "headers": {
+            "type": "string",
+            "description": "Enter column headers for your new spreadsheet. These will be ignored if \u201cSpreadsheet to Copy\u201d is selected. Headers are REQUIRED for spreadsheets that will be used with add_row or update_row operations. Without headers in the first row, these operations will fail, unless you call Create Column later."
+          },
+          "spreadsheet_to_copy": {
+            "type": "string",
+            "description": "Spreadsheet to Copy"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_create_worksheet": {
+      "name": "zapier_google_sheets_create_worksheet",
+      "description": "Creates a new worksheet in a Google Sheet.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "title": {
+            "type": "string",
+            "description": "Title"
+          },
+          "headers": {
+            "type": "string",
+            "description": "null Headers are REQUIRED for worksheets that will be used with add_row or update_row operations. Without headers in the first row, these operations will fail, unless you call Create Column later."
+          },
+          "overwrite": {
+            "type": "string",
+            "description": "Overwrite existing worksheet with the same title"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_clear_spreadsheet_row_s": {
+      "name": "zapier_google_sheets_clear_spreadsheet_row_s",
+      "description": "Clears the contents of the selected row(s) while keeping the row(s) intact in the spreadsheet.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "row": {
+            "type": "string",
+            "description": "Row(s)"
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_delete_sheet": {
+      "name": "zapier_google_sheets_delete_sheet",
+      "description": "Permanently delete a worksheet from a Google Sheets spreadsheet. Warning: This action cannot be undone.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          },
+          "confirmation": {
+            "type": "string",
+            "description": "Confirm Deletion"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_delete_spreadsheet_row_s": {
+      "name": "zapier_google_sheets_delete_spreadsheet_row_s",
+      "description": "Deletes the selected row(s) from the spreadsheet. This action removes the row(s) and all associated data.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "rows": {
+            "type": "string",
+            "description": "Row(s)"
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_format_cell_range": {
+      "name": "zapier_google_sheets_format_cell_range",
+      "description": "Apply date, number, or style formatting (colors, bold, italic, strikethrough) to a range of cells in a Google Sheets spreadsheet.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "range": {
+            "type": "string",
+            "description": "Cell Range"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "format_type": {
+            "type": "string",
+            "description": "Format Type"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_format_spreadsheet_row": {
+      "name": "zapier_google_sheets_format_spreadsheet_row",
+      "description": "Format a row in a specific spreadsheet.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "row": {
+            "type": "string",
+            "description": "Row"
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "text_color": {
+            "type": "string",
+            "description": "Text Color"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          },
+          "background_color": {
+            "type": "string",
+            "description": "Background Color"
+          },
+          "text_format_bold": {
+            "type": "string",
+            "description": "Bold"
+          },
+          "text_format_italic": {
+            "type": "string",
+            "description": "Italic"
+          },
+          "text_format_strikethrough": {
+            "type": "string",
+            "description": "Strikethrough"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_rename_sheet": {
+      "name": "zapier_google_sheets_rename_sheet",
+      "description": "Rename a worksheet in a Google Sheets spreadsheet.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "new_name": {
+            "type": "string",
+            "description": "New Sheet Name"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_set_data_validation": {
+      "name": "zapier_google_sheets_set_data_validation",
+      "description": "Set data validation rules on a range of cells in Google Sheets to control what data can be entered.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "range": {
+            "type": "string",
+            "description": "Cell Range"
+          },
+          "strict": {
+            "type": "string",
+            "description": "Strict Validation"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          },
+          "input_message": {
+            "type": "string",
+            "description": "Input Message"
+          },
+          "validation_type": {
+            "type": "string",
+            "description": "Validation Type"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_sort_range": {
+      "name": "zapier_google_sheets_sort_range",
+      "description": "Sort data within a specified range in Google Sheets by a chosen column in ascending or descending order.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "range": {
+            "type": "string",
+            "description": "Cell Range"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "sort_order": {
+            "type": "string",
+            "description": "Sort Order"
+          },
+          "sort_column": {
+            "type": "string",
+            "description": "Sort by Column"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_update_spreadsheet_row": {
+      "name": "zapier_google_sheets_update_spreadsheet_row",
+      "description": "Update a row in a specific spreadsheet with optional formatting.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "row": {
+            "type": "string",
+            "description": "Row"
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "text_color": {
+            "type": "string",
+            "description": "Text Color"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          },
+          "background_color": {
+            "type": "string",
+            "description": "Background Color"
+          },
+          "text_format_bold": {
+            "type": "string",
+            "description": "Bold"
+          },
+          "text_format_italic": {
+            "type": "string",
+            "description": "Italic"
+          },
+          "text_format_strikethrough": {
+            "type": "string",
+            "description": "Strikethrough"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_update_spreadsheet_row_s": {
+      "name": "zapier_google_sheets_update_spreadsheet_row_s",
+      "description": "Update one or more rows in a specific spreadsheet (with line item support).",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "drive": {
+            "type": "string",
+            "description": "Drive"
+          },
+          "worksheet": {
+            "type": "string",
+            "description": "Worksheet"
+          },
+          "spreadsheet": {
+            "type": "string",
+            "description": "Spreadsheet"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_google_sheets_api_request_beta": {
+      "name": "zapier_google_sheets_api_request_beta",
+      "description": "This is an advanced action which makes a raw HTTP request that includes this integration's authentication.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "url": {
+            "type": "string",
+            "description": "URL"
+          },
+          "body": {
+            "type": "string",
+            "description": "Body"
+          },
+          "method": {
+            "type": "string",
+            "description": "HTTP Method"
+          },
+          "headers": {
+            "type": "string",
+            "description": "Additional request headers"
+          },
+          "querystring": {
+            "type": "string",
+            "description": "Query string parameters"
+          },
+          "fail_on_errors": {
+            "type": "string",
+            "description": "Stop on error"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_firecrawl_scrape_structured_data_from_one_page_json_mode": {
+      "name": "zapier_firecrawl_scrape_structured_data_from_one_page_json_mode",
+      "description": "Scrapes a URL and returns extracted JSON data for a single page.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "url": {
+            "type": "string",
+            "description": "URL for data to be extracted"
+          },
+          "extraction_prompt": {
+            "type": "string",
+            "description": "Extraction Prompt"
+          },
+          "extraction_schema": {
+            "type": "string",
+            "description": "Extraction Schema (JSON)"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_firecrawl_crawl_website": {
+      "name": "zapier_firecrawl_crawl_website",
+      "description": "Crawl a URL and return sub pages contents ",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "url": {
+            "type": "string",
+            "description": "URL"
+          },
+          "limit": {
+            "type": "string",
+            "description": "Limit"
+          },
+          "excludePaths": {
+            "type": "string",
+            "description": "Exclude paths"
+          },
+          "includePaths": {
+            "type": "string",
+            "description": "Include paths"
+          },
+          "ignoreSitemap": {
+            "type": "string",
+            "description": "Ignore sitemap"
+          },
+          "ignoreQueryParameters": {
+            "type": "string",
+            "description": "Ignore query parameters"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_firecrawl_extract_structured_data_from_websites_with_ai": {
+      "name": "zapier_firecrawl_extract_structured_data_from_websites_with_ai",
+      "description": "Extract structured information",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "URLs": {
+            "type": "string",
+            "description": "URLs"
+          },
+          "prompt": {
+            "type": "string",
+            "description": "Prompt"
+          },
+          "showSources": {
+            "type": "string",
+            "description": "Show Sources"
+          },
+          "ignoreSitemap": {
+            "type": "string",
+            "description": "Ignore Sitemap"
+          },
+          "enableWebSearch": {
+            "type": "string",
+            "description": "Enable Web Search"
+          },
+          "extraction_schema": {
+            "type": "string",
+            "description": "Extraction Schema in JSON"
+          },
+          "includeSubdomains": {
+            "type": "string",
+            "description": "Include Subdomains"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_firecrawl_scrape_page": {
+      "name": "zapier_firecrawl_scrape_page",
+      "description": "Scrape a URL and return its contents",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "url": {
+            "type": "string",
+            "description": "Page URL"
+          },
+          "proxy": {
+            "type": "string",
+            "description": "Proxy"
+          },
+          "timeout": {
+            "type": "string",
+            "description": "Timeout"
+          },
+          "waitFor": {
+            "type": "string",
+            "description": "Wait For"
+          },
+          "excludeTags": {
+            "type": "string",
+            "description": "Exclude Tags"
+          },
+          "includeTags": {
+            "type": "string",
+            "description": "Include Tags"
+          },
+          "onlyMainContent": {
+            "type": "string",
+            "description": "Only Main Content?"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    },
+    "zapier_firecrawl_search_data": {
+      "name": "zapier_firecrawl_search_data",
+      "description": "Search and optionally scrape search results",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "type": "string",
+            "description": "Instructions for running this tool. Any parameters that are not given a value will be guessed based on the instructions."
+          },
+          "tbs": {
+            "type": "string",
+            "description": "Time-based search"
+          },
+          "lang": {
+            "type": "string",
+            "description": "Language code for search results"
+          },
+          "limit": {
+            "type": "string",
+            "description": "Limit"
+          },
+          "query": {
+            "type": "string",
+            "description": "Query"
+          },
+          "country": {
+            "type": "string",
+            "description": "Country"
+          },
+          "timeout": {
+            "type": "string",
+            "description": "Timeout"
+          }
+        },
+        "required": [
+          "instructions"
+        ]
+      }
+    }
+  },
+  "categories": {
+    "Google Sheets": [
+      "zapier_google_sheets_lookup_spreadsheet_rows_advanced",
+      "zapier_google_sheets_find_worksheet",
+      "zapier_google_sheets_get_data_range",
+      "zapier_google_sheets_get_many_spreadsheet_rows_advanced",
+      "zapier_google_sheets_get_row_by_id",
+      "zapier_google_sheets_get_spreadsheet_by_id",
+      "zapier_google_sheets_change_sheet_properties",
+      "zapier_google_sheets_lookup_spreadsheet_row",
+      "zapier_google_sheets_create_spreadsheet_column",
+      "zapier_google_sheets_create_spreadsheet_row",
+      "zapier_google_sheets_create_multiple_spreadsheet_rows",
+      "zapier_google_sheets_create_spreadsheet_row_at_top",
+      "zapier_google_sheets_create_conditional_formatting_rule",
+      "zapier_google_sheets_copy_range",
+      "zapier_google_sheets_copy_worksheet",
+      "zapier_google_sheets_create_spreadsheet",
+      "zapier_google_sheets_create_worksheet",
+      "zapier_google_sheets_clear_spreadsheet_row_s",
+      "zapier_google_sheets_delete_sheet",
+      "zapier_google_sheets_delete_spreadsheet_row_s",
+      "zapier_google_sheets_format_cell_range",
+      "zapier_google_sheets_format_spreadsheet_row",
+      "zapier_google_sheets_rename_sheet",
+      "zapier_google_sheets_set_data_validation",
+      "zapier_google_sheets_sort_range",
+      "zapier_google_sheets_update_spreadsheet_row",
+      "zapier_google_sheets_update_spreadsheet_row_s",
+      "zapier_google_sheets_api_request_beta"
+    ],
+    "Gmail": [
+      "zapier_gmail_find_email",
+      "zapier_gmail_add_label_to_email",
+      "zapier_gmail_archive_email",
+      "zapier_gmail_delete_email",
+      "zapier_gmail_create_draft",
+      "zapier_gmail_create_draft_reply",
+      "zapier_gmail_create_label",
+      "zapier_gmail_send_email",
+      "zapier_gmail_remove_label_from_email",
+      "zapier_gmail_remove_label_from_conversation",
+      "zapier_gmail_reply_to_email"
+    ],
+    "LinkedIn": [
+      "zapier_linkedin_create_company_update",
+      "zapier_linkedin_create_share_update",
+      "zapier_linkedin_api_request_beta"
+    ],
+    "Firecrawl": [
+      "zapier_firecrawl_get_data_from_crawl",
+      "zapier_firecrawl_get_data_from_extract",
+      "zapier_firecrawl_scrape_structured_data_from_one_page_json_mode",
+      "zapier_firecrawl_crawl_website",
+      "zapier_firecrawl_extract_structured_data_from_websites_with_ai",
+      "zapier_firecrawl_scrape_page",
+      "zapier_firecrawl_search_data"
+    ],
+    "Other": [
+      "zapier_add_tools",
+      "zapier_edit_tools"
+    ]
+  },
+  "batch_operations": [
+    "zapier_google_sheets_lookup_spreadsheet_rows_advanced",
+    "zapier_google_sheets_get_many_spreadsheet_rows_advanced",
+    "zapier_google_sheets_create_multiple_spreadsheet_rows"
+  ]
+}

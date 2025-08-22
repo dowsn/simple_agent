@@ -1,0 +1,16 @@
+{"level":"INFO","timestamp":"2025-08-22T12:16:43.683730","namespace":"mcp_agent.core.context","message":"Configuring logger with level: info"}
+{"level":"INFO","timestamp":"2025-08-22T12:16:43.687752","namespace":"mcp_agent.web_scraper","message":"Loading subagents from configuration..."}
+{"level":"INFO","timestamp":"2025-08-22T12:16:43.688171","namespace":"mcp_agent.web_scraper","message":"MCPApp initialized","data":{"data":{"progress_action":"Running","target":"web_scraper","agent_name":"mcp_application_loop","session_id":"dbbd716b-b01f-46cc-990f-5eb7edc718e9"}}}
+{"level":"INFO","timestamp":"2025-08-22T12:16:43.688266","namespace":"mcp_agent.web_scraper","message":"============================================================"}
+{"level":"INFO","timestamp":"2025-08-22T12:16:43.688273","namespace":"mcp_agent.web_scraper","message":"Web Scraper Started","data":{"data":{"urls":["https://latent.space"],"criteria":"education and AI","spreadsheet":"1PMId37fQEBHPSdmZKcI36b1h0Jumy7ZsstF4u6v_QnA"}}}
+{"level":"INFO","timestamp":"2025-08-22T12:16:43.688278","namespace":"mcp_agent.web_scraper","message":"============================================================"}
+{"level":"INFO","timestamp":"2025-08-22T12:16:43.688287","namespace":"mcp_agent.web_scraper","message":"Starting web scraper workflow","data":{"data":{"urls":["https://latent.space"],"criteria":"education and AI"}}}
+{"level":"INFO","timestamp":"2025-08-22T12:16:43.693552","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"firecrawl: Up and running with a persistent connection!"}
+{"level":"INFO","timestamp":"2025-08-22T12:16:50.005812","namespace":"mcp_agent.web_scraper","message":"Web Scraper Agent: Starting article extraction"}
+{"level":"INFO","timestamp":"2025-08-22T12:16:54.184741","namespace":"mcp_agent.mcp.mcp_aggregator.web_scraper","message":"Requesting tool call","data":{"data":{"progress_action":"Calling Tool","tool_name":"firecrawl_extract","server_name":"firecrawl","agent_name":"web_scraper"}}}
+{"level":"INFO","timestamp":"2025-08-22T12:17:12.243789","namespace":"mcp_agent.mcp.mcp_aggregator.web_scraper","message":"Last aggregator closing, shutting down all persistent connections..."}
+{"level":"INFO","timestamp":"2025-08-22T12:17:12.243100","namespace":"mcp_agent.web_scraper","message":"Completed scraping: 0 articles"}
+{"level":"INFO","timestamp":"2025-08-22T12:17:12.244806","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"Disconnecting all persistent server connections..."}
+{"level":"ERROR","timestamp":"2025-08-22T12:17:12.243045","namespace":"mcp_agent.web_scraper","message":"Failed to scrape https://latent.space","data":{"error":"Expecting value: line 1 column 2 (char 1)"}}
+{"level":"INFO","timestamp":"2025-08-22T12:17:12.249735","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"firecrawl: Requesting shutdown..."}
+{"level":"INFO","timestamp":"2025-08-22T12:17:12.450090","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"All persistent server connections signaled to disconnect."}

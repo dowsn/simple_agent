@@ -1,0 +1,16 @@
+{"level":"INFO","timestamp":"2025-08-21T17:09:01.842080","namespace":"mcp_agent.core.context","message":"Configuring logger with level: info"}
+{"level":"INFO","timestamp":"2025-08-21T17:09:01.843242","namespace":"mcp_agent.zapier_tools_lister","message":"MCPApp initialized","data":{"data":{"progress_action":"Running","target":"zapier_tools_lister","agent_name":"mcp_application_loop","session_id":"43c16ee7-a5c2-4d40-9381-c499ee56d910"}}}
+{"level":"INFO","timestamp":"2025-08-21T17:09:01.843016","namespace":"mcp_agent.zapier_tools_lister","message":"Loading subagents from configuration..."}
+{"level":"INFO","timestamp":"2025-08-21T17:09:01.845439","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"zapier: Up and running with a persistent connection!"}
+{"level":"INFO","timestamp":"2025-08-21T17:09:03.337138","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"Disconnecting all persistent server connections..."}
+{"level":"INFO","timestamp":"2025-08-21T17:09:03.336917","namespace":"mcp_agent.mcp.mcp_aggregator.zapier_lister","message":"Last aggregator closing, shutting down all persistent connections..."}
+{"level":"INFO","timestamp":"2025-08-21T17:09:03.337916","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"zapier: Requesting shutdown..."}
+{"level":"INFO","timestamp":"2025-08-21T17:09:03.539181","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"All persistent server connections signaled to disconnect."}
+{"level":"INFO","timestamp":"2025-08-21T17:09:03.550572","namespace":"mcp_agent.zapier_batch_tester","message":"Loading subagents from configuration..."}
+{"level":"INFO","timestamp":"2025-08-21T17:09:03.550422","namespace":"mcp_agent.core.context","message":"Configuring logger with level: info"}
+{"level":"INFO","timestamp":"2025-08-21T17:09:03.550702","namespace":"mcp_agent.zapier_batch_tester","message":"MCPApp initialized","data":{"data":{"progress_action":"Running","target":"zapier_batch_tester","agent_name":"mcp_application_loop","session_id":"a7c46c8f-409a-4632-a9a6-ffd52c1fd8c9"}}}
+{"level":"INFO","timestamp":"2025-08-21T17:09:03.552924","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"zapier: Up and running with a persistent connection!"}
+{"level":"INFO","timestamp":"2025-08-21T17:09:14.139452","namespace":"mcp_agent.mcp.mcp_aggregator.batch_tester","message":"Last aggregator closing, shutting down all persistent connections..."}
+{"level":"INFO","timestamp":"2025-08-21T17:09:14.139859","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"Disconnecting all persistent server connections..."}
+{"level":"INFO","timestamp":"2025-08-21T17:09:14.141161","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"zapier: Requesting shutdown..."}
+{"level":"INFO","timestamp":"2025-08-21T17:09:14.343411","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"All persistent server connections signaled to disconnect."}

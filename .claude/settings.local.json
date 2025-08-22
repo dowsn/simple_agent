@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__context7__get-library-docs",
+      "mcp__context7__resolve-library-id",
+      "Bash(uv run:*)",
+      "WebSearch",
+      "mcp__context7__resolve-library-id",
+      "Bash(uv pip install:*)",
+      "Bash(rm:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

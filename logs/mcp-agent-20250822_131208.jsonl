@@ -1,0 +1,10 @@
+{"level":"INFO","timestamp":"2025-08-22T13:12:08.031781","namespace":"mcp_agent.core.context","message":"Configuring logger with level: info"}
+{"level":"INFO","timestamp":"2025-08-22T13:12:08.033935","namespace":"mcp_agent.web_scraper","message":"Loading subagents from configuration..."}
+{"level":"INFO","timestamp":"2025-08-22T13:12:08.034417","namespace":"mcp_agent.web_scraper","message":"============================================================"}
+{"level":"INFO","timestamp":"2025-08-22T13:12:08.034281","namespace":"mcp_agent.web_scraper","message":"MCPApp initialized","data":{"data":{"progress_action":"Running","target":"web_scraper","agent_name":"mcp_application_loop","session_id":"81208b4b-2adb-4e7a-9e10-cd0710df0aff"}}}
+{"level":"INFO","timestamp":"2025-08-22T13:12:08.034427","namespace":"mcp_agent.web_scraper","message":"Web Scraper Started","data":{"data":{"urls":["https://latent.space"],"criteria":"education and AI","spreadsheet":"1PMId37fQEBHPSdmZKcI36b1h0Jumy7ZsstF4u6v_QnA"}}}
+{"level":"INFO","timestamp":"2025-08-22T13:12:08.034434","namespace":"mcp_agent.web_scraper","message":"============================================================"}
+{"level":"INFO","timestamp":"2025-08-22T13:12:08.034446","namespace":"mcp_agent.web_scraper","message":"Starting web scraper workflow","data":{"data":{"urls":["https://latent.space"],"criteria":"education and AI"}}}
+{"level":"INFO","timestamp":"2025-08-22T13:12:08.057346","namespace":"mcp_agent.mcp.mcp_connection_manager","message":"firecrawl: Up and running with a persistent connection!"}
+{"level":"INFO","timestamp":"2025-08-22T13:12:10.831215","namespace":"mcp_agent.web_scraper","message":"Web Scraper Agent: Starting article extraction"}
+{"level":"INFO","timestamp":"2025-08-22T13:12:14.946538","namespace":"mcp_agent.mcp.mcp_aggregator.web_scraper","message":"Requesting tool call","data":{"data":{"progress_action":"Calling Tool","tool_name":"firecrawl_extract","server_name":"firecrawl","agent_name":"web_scraper"}}}
