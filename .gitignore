@@ -1,0 +1,14 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Secrets and API keys
+mcp_agent.secrets.yaml
+mcp_agent.secrets.yml
+*.secrets.yaml
+*.secrets.yml
+
+# Other sensitive config files
+*api_keys.yaml
+*api_keys.yml
