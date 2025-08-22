@@ -9,6 +9,10 @@ mcp_agent.secrets.yml
 *.secrets.yaml
 *.secrets.yml
 
+# MCP configuration with sensitive data
+mcp_agent.config.yaml
+mcp_agent.config.yml
+
 # Other sensitive config files
 *api_keys.yaml
 *api_keys.yml
