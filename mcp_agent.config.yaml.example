@@ -1,0 +1,18 @@
+# MCP Agent Configuration Example
+# Copy this file to mcp_agent.config.yaml and fill in your actual values
+
+mcp:
+  servers:
+    firecrawl:
+      command: "uvx"
+      args: ["mcp-server-firecrawl"]
+    zapier:
+      command: "uvx"
+      args: ["mcp-server-zapier-nla"]
+      # For OAuth connection (recommended for production):
+      # env:
+      #   ZAPIER_OAUTH_URL: "https://mcp.zapier.com/api/mcp/a/YOUR_ACCOUNT_ID/mcp?serverId=YOUR_SERVER_ID"
+      
+      # For server-specific URL (simpler but treat like a password):
+      # env:
+      #   ZAPIER_SERVER_URL: "https://mcp.zapier.com/api/mcp/s/YOUR_SECRET/mcp"
