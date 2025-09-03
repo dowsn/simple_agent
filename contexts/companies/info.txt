@@ -1,0 +1,6 @@
+Company-specific information:
+- Enterprise features and pricing
+- Security and compliance certifications
+- Integration capabilities
+- SLA and support options
+- Scalability and customization options

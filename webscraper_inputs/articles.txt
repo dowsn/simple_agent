@@ -1,0 +1,17 @@
+# This file tracks processed article URLs to prevent duplicates
+# Each line contains one article URL
+# New articles will be automatically appended by the system
+https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback
+https://openai.com/index/deliberative-alignment/
+https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/
+https://deepmind.google/discover/blog/introducing-gemini-2-0-our-new-ai-model-for-the-agentic-era/
+https://openai.com/index/introducing-gpt-5/
+https://blog.google/products/gemini/image-generation-prompting-tips/
+https://blog.google/products/gemini/updated-image-editing-model
+https://www.uipath.com/blog/ai
+https://www.uipath.com/blog/ai/why-ai-agents-need-idp
+https://www.anthropic.com/news/anthropic-education-report-how-educators-use-claude
+https://www.anthropic.com/research/tracing-thoughts-language-model
+https://ai.meta.com/blog/dinov3-self-supervised-vision-model/
+https://news.mit.edu/2025/vaxseer-ai-tool-to-improve-flu-vaccine-strain-selection-0828
+https://blog.google/technology/ai/ask-a-techspert-what-is-inference/

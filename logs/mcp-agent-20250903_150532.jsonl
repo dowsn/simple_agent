@@ -1,0 +1,6 @@
+{"level":"INFO","timestamp":"2025-09-03T15:05:32.418325","namespace":"mcp_agent.core.context","message":"Configuring logger with level: debug"}
+{"level":"INFO","timestamp":"2025-09-03T15:05:32.419683","namespace":"mcp_agent.email_management","message":"Loading subagents from configuration..."}
+{"level":"DEBUG","timestamp":"2025-09-03T15:05:32.419888","namespace":"mcp_agent.email_management","message":"Registering global workflow tasks with application instance."}
+{"level":"DEBUG","timestamp":"2025-09-03T15:05:32.419898","namespace":"mcp_agent.email_management","message":"Registering global workflow task: mcp_agent.workflows.llm.augmented_llm_anthropic.AnthropicCompletionTasks.request_completion_task"}
+{"level":"DEBUG","timestamp":"2025-09-03T15:05:32.419908","namespace":"mcp_agent.email_management","message":"Registering global workflow task: mcp_agent.workflows.llm.augmented_llm_anthropic.AnthropicCompletionTasks.request_structured_completion_task"}
+{"level":"INFO","timestamp":"2025-09-03T15:05:32.419916","namespace":"mcp_agent.email_management","message":"MCPApp initialized","data":{"data":{"progress_action":"Running","target":"email_management","agent_name":"mcp_application_loop","session_id":"36ef2209-e830-482b-a565-e0b4357494d7"}}}

@@ -4,6 +4,8 @@ mcp-agent @ file://../../../  # Link to the local mcp-agent project root
 # Additional dependencies specific to this example
 anthropic
 openai
+firecrawl-py
+Firecrawl
 
 # Streamlit and web app dependencies
 streamlit>=1.28.0

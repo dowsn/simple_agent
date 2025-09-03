@@ -7,7 +7,14 @@
       "WebSearch",
       "mcp__context7__resolve-library-id",
       "Bash(uv pip install:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(grep:*)",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)",
+      "Bash(uv add:*)",
+      "WebFetch(domain:docs.firecrawl.dev)",
+      "Bash(uv pip uninstall:*)",
+      "Bash(python:*)"
     ],
     "deny": [],
     "ask": []

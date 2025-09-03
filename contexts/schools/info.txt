@@ -1,0 +1,6 @@
+School-specific information:
+- Educational discounts available
+- FERPA compliance details
+- Integration with common LMS platforms
+- Student data privacy measures
+- Academic calendar considerations

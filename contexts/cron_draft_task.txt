@@ -1,0 +1,45 @@
+Execute complete email management workflow:
+
+1. STATE CHECK:
+   - Read metadata from data/metadata.json
+   - Get last_email_check timestamp
+
+2. EMAIL MONITORING:
+   - Check Gmail for emails after last_email_check
+   - Add new emails to spreadsheet
+   - Mark which need responses (action_required=1)
+
+3. CLASSIFICATION:
+   - Classify any emails with empty 'type' field
+   - Set initial status based on type
+
+4. CONTEXT GATHERING:
+   - For each email with action_required=1:
+   - Load conversation history
+   - Load relevant context files from contexts/
+   - Create context packages
+
+5. DRAFT GENERATION:
+   - Generate appropriate response for each email
+   - Consider status and type
+   - Suggest status updates
+
+6. ENHANCEMENT:
+   - Polish each draft
+   - Add signature from enhancer_context.txt
+   - Ensure brand consistency
+
+7. EXECUTION:
+   - Save drafts to Gmail
+   - Update spreadsheet (action_required=0, new status)
+   - Add processing notes
+
+8. STATE UPDATE:
+   - Update last_email_check to current time
+   - Update metadata counters
+   - Save to data/metadata.json
+
+Return summary:
+- New emails found
+- Drafts created
+- Status updates made

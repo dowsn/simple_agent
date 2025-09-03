@@ -1,0 +1,19 @@
+Email enhancement rules:
+- Use active voice
+- Remove filler words and redundancies
+- Ensure mobile-friendly formatting
+- Add signature block:
+
+Best regards,
+Alex Thompson
+Senior Solutions Consultant
+TechSolutions Inc.
+alex.thompson@techsolutions.com | (555) 123-4567
+www.techsolutions.com
+
+- Check for:
+  * Grammar and spelling
+  * Consistent tone
+  * Clear subject line
+  * Proper formatting
+  * All questions addressed

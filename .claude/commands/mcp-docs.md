@@ -9,8 +9,8 @@ Check if --explain flag is used
 
 
 Fetch relevant documentation:
-use library /lastmile-ai/mcp-agent for api and docs
-If --topic flag is used, focus the search:
+Use context7 get-library-docs /lastmile-ai/mcp-agent
+if --topic flag is used, focus the search:
 get-library-docs /lastmile-ai/mcp-agent topic="[specified topic]"
 
 Provide targeted response:
