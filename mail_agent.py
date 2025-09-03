@@ -50,7 +50,12 @@ class EmailManagementSystem:
         self.plans_dir.mkdir(parents=True, exist_ok=True)
         self.traces_dir.mkdir(parents=True, exist_ok=True)
         
-        # Load or initialize metadata
+        # Get spreadsheet ID from environment
+        self.spreadsheet_id = os.getenv("EMAIL_CRM_SPREADSHEET_ID")
+        if not self.spreadsheet_id:
+            raise ValueError("EMAIL_CRM_SPREADSHEET_ID environment variable is required")
+        
+        # Load or initialize metadata (without spreadsheet_id)
         self.metadata = self.load_metadata()
         
         # Initialize MCP app
@@ -62,17 +67,11 @@ class EmailManagementSystem:
             with open(self.metadata_file) as f:
                 return json.load(f)
         else:
-            # Get spreadsheet ID from environment
-            spreadsheet_id = os.getenv("EMAIL_CRM_SPREADSHEET_ID")
-            if not spreadsheet_id:
-                raise ValueError("EMAIL_CRM_SPREADSHEET_ID environment variable is required")
-                
             initial_metadata = {
                 "last_email_check": "2025-09-01 01:00:00",
                 "last_context_refresh": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                 "total_emails_processed": 0,
-                "total_drafts_created": 0,
-                "spreadsheet_id": spreadsheet_id
+                "total_drafts_created": 0
             }
             self.save_metadata(initial_metadata)
             return initial_metadata
@@ -97,6 +96,7 @@ class EmailManagementSystem:
             4. Update processing statistics
             
             Current metadata location: {self.metadata_file}
+            Current spreadsheet ID: {self.spreadsheet_id}
             
             When asked to get state:
             - Read the JSON file using filesystem tools
@@ -397,7 +397,8 @@ class EmailManagementSystem:
                     "timestamp": datetime.now().isoformat(),
                     "task": task,
                     "result": result,
-                    "metadata": self.metadata
+                    "metadata": self.metadata,
+                    "spreadsheet_id": self.spreadsheet_id
                 }, f, indent=2)
             
             return result
@@ -409,7 +410,7 @@ class EmailManagementSystem:
             self.create_agents()
             
             orchestrator = Orchestrator(
-                worker_agents=[
+                available_agents=[
                     self.contact_classifier,
                     self.context_aggregator,
                     self.draft_generator,
@@ -453,35 +454,9 @@ class EmailManagementSystem:
             result = await orchestrator.generate_str(task)
             return result
 
-# Test function
-async def test_state_manager():
-    """Test if state_manager agent can read metadata file"""
-    system = EmailManagementSystem()
-    
-    async with system.app.run() as context:
-        system.create_agents()
-        
-        # Test state_manager directly
-        from mcp_agent.workflows.llm.augmented_llm_anthropic import AnthropicAugmentedLLM
-        
-        async with system.state_manager:
-            llm = await system.state_manager.attach_llm(AnthropicAugmentedLLM)
-            
-            print("Testing state_manager agent file reading...")
-            result = await llm.generate_str(f"Read the metadata file at {system.metadata_file} and return its contents")
-            
-            print("State manager test result:")
-            print(result)
 
 # Main execution
 async def main():
-    # Test state manager first
-    print("Testing state_manager agent...")
-    await test_state_manager()
-    
-    print("\n" + "="*50)
-    print("Now testing full workflow...")
-    
     # Initialize system
     system = EmailManagementSystem()
     
