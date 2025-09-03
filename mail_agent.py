@@ -355,7 +355,7 @@ class EmailManagementSystem:
                 
                 # Create orchestrator with plan output
                 orchestrator = Orchestrator(
-                    worker_agents=[
+                    available_agents=[
                         self.state_manager,
                         self.email_monitor,
                         self.contact_classifier,
